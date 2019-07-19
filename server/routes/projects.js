@@ -26,7 +26,7 @@ router.get("/:id", (req, res) => {
       res.json(err);
     });
 });
-
+// /api/projects
 router.post("/", (req, res) => {
   // const title = req.body.title
   // const description = req.body.description
