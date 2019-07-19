@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Project = require("../models/Project");
 
-/* GET home page */
+// /api/projects
 router.get("/", (req, res) => {
   //   get all projects
   // instead of res.render() -> res.json()

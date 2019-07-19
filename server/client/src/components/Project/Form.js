@@ -25,8 +25,8 @@ export default class ProjectForm extends Component {
         title: this.state.title,
         description: this.state.description
       })
-      .then(response => {
-        console.log(response);
+      .then(() => {
+        this.props.refreshList();
         this.setState({
           title: "",
           description: ""
@@ -39,29 +39,27 @@ export default class ProjectForm extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="title">Title: </label>
-          <input
-            type="text"
-            onChange={this.handleChange}
-            id="title"
-            name="title"
-            value={this.state.title}
-          />
+      <form onSubmit={this.handleSubmit}>
+        <label htmlFor="title">Title: </label>
+        <input
+          type="text"
+          onChange={this.handleChange}
+          id="title"
+          name="title"
+          value={this.state.title}
+        />
 
-          <label htmlFor="description">Description: </label>
-          <input
-            onChange={this.handleChange}
-            type="text"
-            name="description"
-            id="description"
-            value={this.state.description}
-          />
+        <label htmlFor="description">Description: </label>
+        <input
+          onChange={this.handleChange}
+          type="text"
+          name="description"
+          id="description"
+          value={this.state.description}
+        />
 
-          <button type="submit">Add Project</button>
-        </form>
-      </div>
+        <button type="submit">Add Project</button>
+      </form>
     );
   }
 }

@@ -1,12 +1,13 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import ProjectForm from "./components/Project/Form";
+
+import Projects from "./containers/Projects";
 
 function App() {
   return (
     <div className="App">
-      <ProjectForm />
+      <Projects />
     </div>
   );
 }
